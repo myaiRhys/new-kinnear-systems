@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Enquiries — anyone can create, nobody can read/update/delete
+    // (you read submissions in the Firebase Console or via Admin SDK)
+    match /enquiries/{docId} {
+      allow create: if
+        request.resource.data.name     is string &&
+        request.resource.data.name.size() > 0 &&
+        request.resource.data.email    is string &&
+        request.resource.data.email.size() > 0 &&
+        request.resource.data.service  is string &&
+        request.resource.data.message  is string &&
+        request.resource.data.message.size() > 0 &&
+        // Prevent abuse — message capped at 2000 chars
+        request.resource.data.message.size() <= 2000;
+
+      allow read, update, delete: if false;
+    }
+
+    // Deny everything else by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
