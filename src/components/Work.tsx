@@ -29,6 +29,19 @@ const CASES = [
     stack: ["Next.js", "TypeScript", "Firebase Firestore", "Firebase Auth", "PWA"],
     highlight: "Full working demo available. Contact us if you run a hire business.",
   },
+  {
+    name: "FieldTrack",
+    type: "Job management PWA for tradespeople",
+    status: "Live",
+    statusColor: "text-green-400 bg-green-400/10 border-green-400/20",
+    client: "Spec project — built to demonstrate KS capability",
+    problem:
+      "Plumbers, electricians and aircon techs in Cape Town manage jobs, quotes and client communication through WhatsApp and paper job cards. No visibility on job status, no quote history, no record of what was done.",
+    solution:
+      "A full PWA installable on any phone without an app store. Manages jobs, clients, photo evidence, quotes with PDF export, a communication log per job, and a scheduling calendar. Works offline.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "PWA", "react-hook-form", "jspdf"],
+    highlight: "Fully working demo — load the app, hit "Load demo data", and explore a live Cape Town plumbing business in your browser.",
+  },
 ];
 
 export default function Work() {
@@ -64,7 +77,7 @@ export default function Work() {
             Our work
           </h2>
           <p className="text-off-wht/50 max-w-lg">
-            Two real projects built on our stack. Both are production applications, not mockups.
+            Three real projects built on our stack. All are production applications, not mockups.
           </p>
         </div>
 
