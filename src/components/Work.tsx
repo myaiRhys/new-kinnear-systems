@@ -40,7 +40,7 @@ const CASES = [
     solution:
       "A full PWA installable on any phone without an app store. Manages jobs, clients, photo evidence, quotes with PDF export, a communication log per job, and a scheduling calendar. Works offline.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "PWA", "react-hook-form", "jspdf"],
-    highlight: "Fully working demo — load the app, hit "Load demo data", and explore a live Cape Town plumbing business in your browser.",
+    highlight: "Fully working demo — load the app, hit 'Load demo data', and explore a live Cape Town plumbing business in your browser.",
   },
 ];
 
