@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const STACK = ["Next.js", "TypeScript", "Firebase", "PWA", "GitHub Actions"];
+const STACK = ["Next.js", "TypeScript", "React", "Firebase", "Tailwind CSS", "PWA", "Claude API", "Node.js", "REST APIs", "Vercel", "GitHub Actions", "Offline-first"];
 
 type EyebrowStyle = "line" | "tag" | "plain";
 type Layout = "left" | "centered" | "split-reverse" | "stacked";
@@ -54,7 +54,7 @@ const variants: Variant[] = [
     layout: "centered",
     bg: "rings",
     ctaShape: "pill",
-    showPills: false,
+    showPills: true,
   },
   {
     accent: "#F59E0B",
@@ -88,7 +88,7 @@ const variants: Variant[] = [
     layout: "left",
     bg: "dots",
     ctaShape: "rounded",
-    showPills: false,
+    showPills: true,
   },
   {
     accent: "#10B981",
@@ -141,7 +141,7 @@ const variants: Variant[] = [
     layout: "stacked",
     bg: "grid",
     ctaShape: "pill",
-    showPills: false,
+    showPills: true,
   },
   {
     accent: "#06B6D4",
