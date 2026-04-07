@@ -76,7 +76,7 @@ export default function SpringCursor() {
         style={{
           width: 8,
           height: 8,
-          backgroundColor: "#e8e4dc",
+          backgroundColor: "#1A1A1A",
           borderRadius: "50%",
           willChange: "transform",
         }}
@@ -88,7 +88,7 @@ export default function SpringCursor() {
         style={{
           width: isHovering ? 48 : 32,
           height: isHovering ? 48 : 32,
-          border: `1px solid ${isHovering ? "rgba(232,228,220,0.6)" : "rgba(232,228,220,0.3)"}`,
+          border: `1px solid ${isHovering ? "rgba(26,26,26,0.6)" : "rgba(26,26,26,0.3)"}`,
           borderRadius: "50%",
           willChange: "transform",
           marginLeft: isHovering ? -8 : 0,

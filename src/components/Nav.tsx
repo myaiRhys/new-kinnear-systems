@@ -22,17 +22,17 @@ export default function Nav() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0a0a0a]/92 backdrop-blur-[12px] border-b border-[rgba(232,228,220,0.08)]"
+          ? "bg-[#F5F4F0]/92 backdrop-blur-[12px] border-b border-[rgba(26,26,26,0.08)]"
           : "bg-transparent"
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Wordmark */}
         <Link href="/" className="flex items-baseline gap-0 group">
-          <span className="font-serif text-xl font-normal text-[#e8e4dc] tracking-tight">
+          <span className="font-serif text-xl font-normal text-[#1A1A1A] tracking-tight">
             Kinnear
           </span>
-          <span className="font-serif text-xl font-normal text-[#e8e4dc] tracking-tight">
+          <span className="font-serif text-xl font-normal text-[#1A1A1A] tracking-tight">
             Systems
           </span>
         </Link>
@@ -44,14 +44,14 @@ export default function Nav() {
               {l.isCta ? (
                 <a
                   href={l.href}
-                  className="text-[11px] font-mono uppercase tracking-widest bg-[#e8e4dc] text-[#0a0a0a] px-4 py-2 transition-opacity duration-200 hover:opacity-80"
+                  className="text-[11px] font-mono uppercase tracking-widest bg-[#1A1A1A] text-[#F5F4F0] px-4 py-2 transition-opacity duration-200 hover:opacity-80"
                 >
                   {l.label}
                 </a>
               ) : (
                 <a
                   href={l.href}
-                  className="text-sm text-[rgba(232,228,220,0.6)] hover:text-[#e8e4dc] transition-colors duration-200 underline-hover"
+                  className="text-sm text-[rgba(26,26,26,0.6)] hover:text-[#1A1A1A] transition-colors duration-200 underline-hover"
                 >
                   {l.label}
                 </a>

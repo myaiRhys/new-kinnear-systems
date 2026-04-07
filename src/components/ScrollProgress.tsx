@@ -24,7 +24,7 @@ export default function ScrollProgress() {
       className="fixed top-0 left-0 h-[1px] z-50"
       style={{
         width: `${progress * 100}%`,
-        backgroundColor: "rgba(232,228,220,0.5)",
+        backgroundColor: "rgba(26,26,26,0.4)",
         willChange: "width",
       }}
     />

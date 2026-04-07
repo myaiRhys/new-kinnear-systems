@@ -56,13 +56,14 @@ const fragmentShaderSource = `
     float n = fbm(st * 3.0 + u_time * 0.05 + mouseInfluence);
     n += fbm(st * 6.0 - u_time * 0.03) * 0.5;
 
-    // Color: dark grays with subtle variation
-    float brightness = 0.04 + n * 0.03 + mouseEffect;
+    // Color: warm light beige with subtle variation
+    float brightness = 0.96 - n * 0.025 - mouseEffect;
     vec3 color = vec3(brightness);
 
-    // Subtle warm tint
-    color.r += 0.005;
+    // Subtle warm tint for #F5F4F0 feel
+    color.r += 0.008;
     color.g += 0.003;
+    color.b -= 0.012;
 
     gl_FragColor = vec4(color, 1.0);
   }

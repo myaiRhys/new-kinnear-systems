@@ -9,11 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "shader-black": "#0a0a0a",
-        "shader-dark": "#111111",
-        "shader-text": "#e8e4dc",
-        "shader-muted": "rgba(232,228,220,0.4)",
-        "shader-border": "rgba(232,228,220,0.08)",
+        // Warm light theme
+        "ks-bg": "#F5F4F0",
+        "ks-bg-alt": "#ECEAE4",
+        "ks-text": "#1A1A1A",
+        "ks-text-muted": "rgba(26,26,26,0.55)",
+        "ks-border": "rgba(26,26,26,0.1)",
+        "ks-accent": "#2D2D2D",
+        // Legacy aliases for gradual migration
+        "shader-black": "#F5F4F0",
+        "shader-dark": "#ECEAE4",
+        "shader-text": "#1A1A1A",
+        "shader-muted": "rgba(26,26,26,0.4)",
+        "shader-border": "rgba(26,26,26,0.1)",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],

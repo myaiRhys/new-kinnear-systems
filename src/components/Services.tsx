@@ -15,6 +15,7 @@ const SERVICES = [
     usd: "$450",
     desc: "Custom Next.js websites — fast, SEO-ready, and actually yours. No page builders, no licence fees, no ceiling.",
     tags: ["Next.js", "SEO", "Tailwind"],
+    note: "Starter sites from R3,000 for simple single-page builds",
   },
   {
     icon: (
@@ -63,43 +64,43 @@ export default function Services() {
   useScrollReveal();
 
   return (
-    <section id="services" className="py-28 max-w-6xl mx-auto px-6">
+    <section id="services" className="py-32 max-w-6xl mx-auto px-6">
       {/* Header */}
       <div className="mb-16" data-reveal>
-        <span className="text-[11px] font-mono text-[rgba(232,228,220,0.4)] tracking-widest uppercase">
+        <span className="text-[11px] font-mono text-[rgba(26,26,26,0.45)] tracking-widest uppercase">
           What we build
         </span>
-        <h2 className="font-serif text-4xl font-normal mt-3 mb-4 tracking-tight">
+        <h2 className="font-serif text-4xl font-normal mt-3 mb-4 tracking-tight text-[#1A1A1A]">
           Services
         </h2>
-        <p className="text-[rgba(232,228,220,0.5)] max-w-lg text-sm">
+        <p className="text-[rgba(26,26,26,0.6)] max-w-lg leading-relaxed">
           Fixed-price projects with a clear scope. 50% deposit to start, balance on delivery. No surprise invoices.
         </p>
       </div>
 
       {/* Grid */}
-      <div className="grid md:grid-cols-2 gap-4" data-reveal-group>
+      <div className="grid md:grid-cols-2 gap-5" data-reveal-group>
         {SERVICES.map((s) => (
           <div
             key={s.title}
-            className="group relative p-6 bg-[#0a0a0a] border border-[rgba(232,228,220,0.08)] hover:border-[rgba(232,228,220,0.2)] hover:bg-[#111] transition-all duration-300"
+            className="group relative p-8 bg-white border border-[rgba(26,26,26,0.08)] hover:border-[rgba(26,26,26,0.2)] transition-all duration-300"
             data-reveal-child
           >
             {s.highlight && (
-              <span className="absolute top-4 right-4 text-[11px] font-mono text-[rgba(232,228,220,0.4)] bg-[rgba(232,228,220,0.06)] border border-[rgba(232,228,220,0.1)] px-2 py-0.5">
+              <span className="absolute top-4 right-4 text-[11px] font-mono text-[rgba(26,26,26,0.5)] bg-[rgba(26,26,26,0.05)] border border-[rgba(26,26,26,0.1)] px-2 py-0.5">
                 Most popular
               </span>
             )}
-            <div className="text-[rgba(232,228,220,0.5)] mb-4">{s.icon}</div>
-            <h3 className="font-serif text-xl font-normal mb-2 tracking-tight">{s.title}</h3>
-            <p className="text-[rgba(232,228,220,0.5)] text-sm leading-relaxed mb-5">{s.desc}</p>
+            <div className="text-[rgba(26,26,26,0.4)] mb-4">{s.icon}</div>
+            <h3 className="font-serif text-xl font-normal mb-2 tracking-tight text-[#1A1A1A]">{s.title}</h3>
+            <p className="text-[rgba(26,26,26,0.6)] leading-relaxed mb-5">{s.desc}</p>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-1.5 mb-5">
               {s.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] font-mono text-[rgba(232,228,220,0.3)] bg-[rgba(232,228,220,0.06)] px-2.5 py-1"
+                  className="text-[11px] font-mono text-[rgba(26,26,26,0.55)] bg-[rgba(26,26,26,0.06)] px-2.5 py-1"
                 >
                   {tag}
                 </span>
@@ -107,20 +108,27 @@ export default function Services() {
             </div>
 
             {/* Price */}
-            <div className="flex items-baseline gap-3 pt-4 border-t border-[rgba(232,228,220,0.08)]">
-              <span className="font-serif text-lg text-[#e8e4dc]">{s.price}</span>
-              <span className="text-sm text-[rgba(232,228,220,0.3)] font-mono">/ {s.usd}</span>
+            <div className="flex items-baseline gap-3 pt-4 border-t border-[rgba(26,26,26,0.08)]">
+              <span className="font-serif text-lg text-[#1A1A1A]">{s.price}</span>
+              <span className="text-sm text-[rgba(26,26,26,0.4)] font-mono">/ {s.usd}</span>
             </div>
+
+            {/* Optional note for starter tier */}
+            {s.note && (
+              <p className="mt-3 text-[11px] font-mono text-[rgba(26,26,26,0.45)]">
+                {s.note}
+              </p>
+            )}
           </div>
         ))}
       </div>
 
       {/* Footer note */}
-      <p className="mt-8 text-[11px] text-[rgba(232,228,220,0.3)] font-mono" data-reveal>
+      <p className="mt-8 text-[11px] text-[rgba(26,26,26,0.4)] font-mono" data-reveal>
         * USD pricing for international clients. Prices exclude VAT. Timeline varies by scope.
         <a
           href="#contact"
-          className="text-[rgba(232,228,220,0.5)] hover:text-[#e8e4dc] ml-2 underline-hover"
+          className="text-[rgba(26,26,26,0.6)] hover:text-[#1A1A1A] ml-2 underline-hover"
         >
           Get a custom quote →
         </a>

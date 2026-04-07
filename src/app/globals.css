@@ -13,32 +13,35 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background-color: #0a0a0a;
-  color: #e8e4dc;
+  background-color: #F5F4F0;
+  color: #1A1A1A;
   font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
   cursor: none;
 }
 
 /* ── Selection ───────────────────────────────────────── */
 ::selection {
-  background: rgba(232,228,220,0.2);
-  color: #e8e4dc;
+  background: rgba(26,26,26,0.12);
+  color: #1A1A1A;
 }
 
 /* ── Focus ring ──────────────────────────────────────── */
 :focus-visible {
-  outline: 1px solid rgba(232,228,220,0.3);
+  outline: 1px solid rgba(26,26,26,0.3);
   outline-offset: 3px;
   border-radius: 0;
 }
 
 /* ── Scrollbar ───────────────────────────────────────── */
 ::-webkit-scrollbar        { width: 6px; }
-::-webkit-scrollbar-track  { background: #0a0a0a; }
-::-webkit-scrollbar-thumb  { background: rgba(232,228,220,0.15); border-radius: 3px; }
+::-webkit-scrollbar-track  { background: #F5F4F0; }
+::-webkit-scrollbar-thumb  { background: rgba(26,26,26,0.15); border-radius: 3px; }
 
 /* ── Utility: animated underline ─────────────────────── */
 .underline-hover {
@@ -50,7 +53,7 @@ body {
   position: absolute;
   bottom: -2px; left: 0;
   width: 0; height: 1px;
-  background: #e8e4dc;
+  background: #1A1A1A;
   transition: width 0.25s ease;
 }
 .underline-hover:hover::after { width: 100%; }

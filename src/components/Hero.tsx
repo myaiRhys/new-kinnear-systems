@@ -28,7 +28,7 @@ export default function Hero() {
       <div ref={containerRef} className="relative max-w-6xl mx-auto px-6 pb-16 w-full">
         {/* Scroll hint */}
         <div data-hero-animate className="mb-12">
-          <span className="text-[11px] font-mono text-[rgba(232,228,220,0.4)] tracking-widest">
+          <span className="text-[11px] font-mono text-[rgba(26,26,26,0.4)] tracking-widest">
             ↓ Scroll to explore
           </span>
         </div>
@@ -36,7 +36,7 @@ export default function Hero() {
         {/* Main headline */}
         <h1
           data-hero-animate
-          className="font-serif font-normal leading-[1.05] tracking-tight mb-8"
+          className="font-serif font-normal leading-[1.05] tracking-tight mb-8 text-[#1A1A1A]"
           style={{ fontSize: "clamp(3.5rem, 8vw, 7.5rem)" }}
         >
           Web & App
@@ -45,13 +45,13 @@ export default function Hero() {
           <br />
           Built for the
           <br />
-          <em className="text-[rgba(232,228,220,0.5)] not-italic">Real World</em>
+          <em className="text-[rgba(26,26,26,0.45)] not-italic">Real World</em>
         </h1>
 
         {/* Subline */}
         <p
           data-hero-animate
-          className="text-[12px] font-mono uppercase tracking-widest text-[rgba(232,228,220,0.4)]"
+          className="text-[12px] font-mono uppercase tracking-widest text-[rgba(26,26,26,0.4)]"
         >
           Cape Town · South Africa
         </p>
