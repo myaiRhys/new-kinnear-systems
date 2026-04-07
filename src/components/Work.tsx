@@ -59,7 +59,7 @@ export default function Work() {
           {CASES.map((c, index) => (
             <div
               key={c.name}
-              className="work-item group bg-white border border-[rgba(26,26,26,0.08)] hover:border-[rgba(26,26,26,0.2)] transition-all duration-300"
+              className="work-item group bg-white border border-[rgba(26,26,26,0.08)] border-l-2 border-l-transparent hover:border-l-[#C8602A] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 overflow-hidden"
               data-reveal-child
             >
               {/* Main card content */}
@@ -67,27 +67,34 @@ export default function Work() {
                 onClick={() => toggleExpand(c.name)}
                 className="w-full text-left p-8 relative"
               >
+                {/* Large watermark number */}
+                <span
+                  className="absolute top-4 right-4 font-serif text-[120px] leading-none text-[rgba(26,26,26,0.04)] pointer-events-none select-none"
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
                 {/* Project number */}
-                <span className="text-[11px] font-mono text-[rgba(26,26,26,0.3)] tracking-widest mb-4 block">
+                <span className="text-[11px] font-mono text-[rgba(26,26,26,0.3)] tracking-widest mb-4 block relative z-10">
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
                 {/* Title */}
                 <h3
-                  className="font-serif font-normal tracking-tight mb-2 text-[#1A1A1A]"
+                  className="font-serif font-normal tracking-tight mb-2 text-[#1A1A1A] relative z-10"
                   style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)" }}
                 >
                   {c.name}
                 </h3>
 
                 {/* Type */}
-                <p className="text-[11px] font-mono uppercase tracking-widest text-[rgba(26,26,26,0.45)]">
+                <p className="text-[11px] font-mono uppercase tracking-widest text-[rgba(26,26,26,0.45)] relative z-10">
                   {c.type}
                 </p>
 
                 {/* Expand indicator */}
-                <div className="absolute bottom-8 right-8 w-8 h-8 rounded-full border border-[rgba(26,26,26,0.15)] flex items-center justify-center transition-all duration-300">
-                  <span className={`text-[#1A1A1A] text-sm transition-transform duration-300 ${expanded === c.name ? "rotate-45" : ""}`}>
+                <div className="absolute bottom-8 right-8 w-8 h-8 rounded-full border border-[rgba(26,26,26,0.15)] flex items-center justify-center transition-all duration-300 z-10 group-hover:border-[#C8602A]">
+                  <span className={`text-[#1A1A1A] text-sm transition-transform duration-300 group-hover:text-[#C8602A] ${expanded === c.name ? "rotate-45" : ""}`}>
                     +
                   </span>
                 </div>
@@ -132,7 +139,7 @@ export default function Work() {
                     {c.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[11px] font-mono text-[rgba(26,26,26,0.55)] bg-[rgba(26,26,26,0.06)] px-2.5 py-1"
+                        className="text-[11px] font-mono text-[rgba(26,26,26,0.6)] bg-[rgba(200,96,42,0.08)] px-2.5 py-1"
                       >
                         {tag}
                       </span>
@@ -144,23 +151,30 @@ export default function Work() {
           ))}
 
           {/* Fourth cell - CTA */}
-          <div
-            className="work-item group bg-white border border-[rgba(26,26,26,0.08)] hover:border-[rgba(26,26,26,0.2)] p-8 transition-all duration-300 flex flex-col justify-center"
+          <a
+            href="#contact"
+            className="work-item group bg-white border border-[rgba(26,26,26,0.08)] border-l-2 border-l-transparent hover:border-l-[#C8602A] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] p-8 transition-all duration-300 flex flex-col justify-center relative overflow-hidden"
             data-reveal-child
           >
-            <span className="text-[11px] font-mono text-[rgba(26,26,26,0.3)] tracking-widest mb-4 block">
+            {/* Large watermark number */}
+            <span
+              className="absolute top-4 right-4 font-serif text-[120px] leading-none text-[rgba(26,26,26,0.04)] pointer-events-none select-none"
+            >
+              04
+            </span>
+            <span className="text-[11px] font-mono text-[rgba(26,26,26,0.3)] tracking-widest mb-4 block relative z-10">
               04
             </span>
             <h3
-              className="font-serif font-normal tracking-tight mb-2 text-[#1A1A1A]"
+              className="font-serif font-normal tracking-tight mb-2 text-[#1A1A1A] relative z-10"
               style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)" }}
             >
               Your project?
             </h3>
-            <p className="text-[11px] font-mono uppercase tracking-widest text-[rgba(26,26,26,0.45)]">
-              Let&apos;s build something
+            <p className="text-[11px] font-mono uppercase tracking-widest text-[rgba(26,26,26,0.45)] group-hover:text-[#C8602A] transition-colors relative z-10">
+              Let&apos;s build something →
             </p>
-          </div>
+          </a>
         </div>
       </div>
     </section>

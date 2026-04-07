@@ -9,7 +9,7 @@ export default function Testimonial() {
     <section className="py-32 max-w-6xl mx-auto px-6">
       <div className="max-w-3xl mx-auto text-center" data-reveal>
         {/* Quotation mark */}
-        <span className="text-6xl font-serif text-[rgba(26,26,26,0.1)] leading-none block mb-6">
+        <span className="text-6xl font-serif text-[#C8602A] opacity-30 leading-none block mb-6">
           &ldquo;
         </span>
 

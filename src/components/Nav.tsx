@@ -44,14 +44,14 @@ export default function Nav() {
               {l.isCta ? (
                 <a
                   href={l.href}
-                  className="text-[11px] font-mono uppercase tracking-widest bg-[#1A1A1A] text-[#F5F4F0] px-4 py-2 transition-opacity duration-200 hover:opacity-80"
+                  className="text-[11px] font-mono uppercase tracking-widest bg-[#C8602A] text-white px-4 py-2 transition-all duration-200 hover:bg-[#B5552A]"
                 >
                   {l.label}
                 </a>
               ) : (
                 <a
                   href={l.href}
-                  className="text-sm text-[rgba(26,26,26,0.6)] hover:text-[#1A1A1A] transition-colors duration-200 underline-hover"
+                  className="text-sm text-[rgba(26,26,26,0.6)] hover:text-[#C8602A] transition-colors duration-200 underline-hover"
                 >
                   {l.label}
                 </a>

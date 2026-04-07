@@ -25,6 +25,15 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+      {/* Grain texture overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+          backgroundRepeat: "repeat",
+        }}
+      />
+
       <div ref={containerRef} className="relative max-w-6xl mx-auto px-6 pb-16 w-full">
         {/* Scroll hint */}
         <div data-hero-animate className="mb-12">
@@ -48,14 +57,25 @@ export default function Hero() {
           <em className="text-[rgba(26,26,26,0.45)] not-italic">Real World</em>
         </h1>
 
-        {/* Subline */}
+        {/* Location */}
         <p
           data-hero-animate
-          className="text-[12px] font-mono uppercase tracking-widest text-[rgba(26,26,26,0.4)]"
+          className="text-[12px] font-mono uppercase tracking-widest text-[rgba(26,26,26,0.4)] mb-3"
         >
           Cape Town · South Africa
         </p>
+
+        {/* Tagline */}
+        <p
+          data-hero-animate
+          className="text-[11px] font-mono uppercase tracking-widest text-[#C8602A]"
+        >
+          Fixed-price. No agencies. No bullshit.
+        </p>
       </div>
+
+      {/* Accent divider */}
+      <div className="w-full h-[2px] bg-[#C8602A]" data-hero-animate />
     </section>
   );
 }

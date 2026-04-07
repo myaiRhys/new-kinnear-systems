@@ -15,7 +15,8 @@ const config: Config = {
         "ks-text": "#1A1A1A",
         "ks-text-muted": "rgba(26,26,26,0.55)",
         "ks-border": "rgba(26,26,26,0.1)",
-        "ks-accent": "#2D2D2D",
+        "ks-accent": "#C8602A",
+        "ks-dark": "#1A1A1A",
         // Legacy aliases for gradual migration
         "shader-black": "#F5F4F0",
         "shader-dark": "#ECEAE4",

@@ -58,12 +58,12 @@ export default function FAQ() {
               onClick={() => toggle(index)}
               className="w-full text-left py-6 flex items-start justify-between gap-4 group"
             >
-              <span className="text-[#1A1A1A] font-medium leading-relaxed group-hover:text-[rgba(26,26,26,0.7)] transition-colors">
+              <span className="text-[#1A1A1A] font-medium leading-relaxed group-hover:text-[#C8602A] transition-colors">
                 {faq.question}
               </span>
               <span
-                className={`text-[rgba(26,26,26,0.4)] text-xl shrink-0 transition-transform duration-300 ${
-                  expanded === index ? "rotate-45" : ""
+                className={`text-[rgba(26,26,26,0.4)] text-xl shrink-0 transition-all duration-300 group-hover:text-[#C8602A] ${
+                  expanded === index ? "rotate-45 text-[#C8602A]" : ""
                 }`}
               >
                 +

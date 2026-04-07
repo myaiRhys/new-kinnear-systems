@@ -83,11 +83,11 @@ export default function Services() {
         {SERVICES.map((s) => (
           <div
             key={s.title}
-            className="group relative p-8 bg-white border border-[rgba(26,26,26,0.08)] hover:border-[rgba(26,26,26,0.2)] transition-all duration-300"
+            className="group relative p-8 bg-white border border-[rgba(26,26,26,0.08)] border-l-2 border-l-transparent hover:border-l-[#C8602A] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300"
             data-reveal-child
           >
             {s.highlight && (
-              <span className="absolute top-4 right-4 text-[11px] font-mono text-[rgba(26,26,26,0.5)] bg-[rgba(26,26,26,0.05)] border border-[rgba(26,26,26,0.1)] px-2 py-0.5">
+              <span className="absolute top-4 right-4 text-[11px] font-mono text-[#C8602A] bg-[rgba(200,96,42,0.08)] border border-[rgba(200,96,42,0.2)] px-2 py-0.5">
                 Most popular
               </span>
             )}
@@ -100,7 +100,7 @@ export default function Services() {
               {s.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] font-mono text-[rgba(26,26,26,0.55)] bg-[rgba(26,26,26,0.06)] px-2.5 py-1"
+                  className="text-[11px] font-mono text-[rgba(26,26,26,0.6)] bg-[rgba(200,96,42,0.08)] px-2.5 py-1"
                 >
                   {tag}
                 </span>
@@ -109,7 +109,7 @@ export default function Services() {
 
             {/* Price */}
             <div className="flex items-baseline gap-3 pt-4 border-t border-[rgba(26,26,26,0.08)]">
-              <span className="font-serif text-lg text-[#1A1A1A]">{s.price}</span>
+              <span className="font-serif text-lg text-[#C8602A]">{s.price}</span>
               <span className="text-sm text-[rgba(26,26,26,0.4)] font-mono">/ {s.usd}</span>
             </div>
 
@@ -128,7 +128,7 @@ export default function Services() {
         * USD pricing for international clients. Prices exclude VAT. Timeline varies by scope.
         <a
           href="#contact"
-          className="text-[rgba(26,26,26,0.6)] hover:text-[#1A1A1A] ml-2 underline-hover"
+          className="text-[rgba(26,26,26,0.6)] hover:text-[#C8602A] ml-2 underline-hover"
         >
           Get a custom quote →
         </a>
