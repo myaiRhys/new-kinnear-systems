@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const SERVICES = [
   {
@@ -60,83 +60,70 @@ const SERVICES = [
 ];
 
 export default function Services() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.querySelectorAll(".reveal").forEach((el, i) => {
-              setTimeout(() => el.classList.add("visible"), i * 100);
-            });
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
+  useScrollReveal();
 
   return (
-    <section id="services" ref={sectionRef} className="py-28 max-w-6xl mx-auto px-6">
-
+    <section id="services" className="py-28 max-w-6xl mx-auto px-6">
       {/* Header */}
-      <div className="mb-16 reveal">
-        <span className="text-xs font-mono text-blue/70 tracking-widest uppercase">
+      <div className="mb-16" data-reveal>
+        <span className="text-[11px] font-mono text-[rgba(232,228,220,0.4)] tracking-widest uppercase">
           What we build
         </span>
-        <h2 className="font-display text-4xl font-semibold mt-3 mb-4 tracking-tight">
+        <h2 className="font-serif text-4xl font-normal mt-3 mb-4 tracking-tight">
           Services
         </h2>
-        <p className="text-off-wht/50 max-w-lg">
+        <p className="text-[rgba(232,228,220,0.5)] max-w-lg text-sm">
           Fixed-price projects with a clear scope. 50% deposit to start, balance on delivery. No surprise invoices.
         </p>
       </div>
 
       {/* Grid */}
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 gap-4" data-reveal-group>
         {SERVICES.map((s) => (
           <div
             key={s.title}
-            className={`reveal group relative rounded-xl p-6 border transition-all duration-300 hover:border-blue/40 ${
-              s.highlight
-                ? "border-blue/40 bg-blue/5"
-                : "border-navy-700 bg-navy-800/50 hover:bg-navy-800"
-            }`}
+            className="group relative p-6 bg-[#0a0a0a] border border-[rgba(232,228,220,0.08)] hover:border-[rgba(232,228,220,0.2)] hover:bg-[#111] transition-all duration-300"
+            data-reveal-child
           >
             {s.highlight && (
-              <span className="absolute top-4 right-4 text-xs font-mono text-blue bg-blue/10 border border-blue/20 px-2 py-0.5 rounded-full">
+              <span className="absolute top-4 right-4 text-[11px] font-mono text-[rgba(232,228,220,0.4)] bg-[rgba(232,228,220,0.06)] border border-[rgba(232,228,220,0.1)] px-2 py-0.5">
                 Most popular
               </span>
             )}
-            <div className="text-blue mb-4">{s.icon}</div>
-            <h3 className="font-display text-xl font-semibold mb-2 tracking-tight">{s.title}</h3>
-            <p className="text-off-wht/50 text-sm leading-relaxed mb-5">{s.desc}</p>
+            <div className="text-[rgba(232,228,220,0.5)] mb-4">{s.icon}</div>
+            <h3 className="font-serif text-xl font-normal mb-2 tracking-tight">{s.title}</h3>
+            <p className="text-[rgba(232,228,220,0.5)] text-sm leading-relaxed mb-5">{s.desc}</p>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-1.5 mb-5">
               {s.tags.map((tag) => (
-                <span key={tag} className="text-xs font-mono text-off-wht/30 bg-navy-700 px-2.5 py-1 rounded-md">
+                <span
+                  key={tag}
+                  className="text-[11px] font-mono text-[rgba(232,228,220,0.3)] bg-[rgba(232,228,220,0.06)] px-2.5 py-1"
+                >
                   {tag}
                 </span>
               ))}
             </div>
 
             {/* Price */}
-            <div className="flex items-baseline gap-3 pt-4 border-t border-navy-700">
-              <span className="font-display text-lg font-semibold text-white">{s.price}</span>
-              <span className="text-sm text-off-wht/30 font-mono">/ {s.usd}</span>
+            <div className="flex items-baseline gap-3 pt-4 border-t border-[rgba(232,228,220,0.08)]">
+              <span className="font-serif text-lg text-[#e8e4dc]">{s.price}</span>
+              <span className="text-sm text-[rgba(232,228,220,0.3)] font-mono">/ {s.usd}</span>
             </div>
           </div>
         ))}
       </div>
 
       {/* Footer note */}
-      <p className="mt-8 text-xs text-off-wht/30 font-mono reveal">
+      <p className="mt-8 text-[11px] text-[rgba(232,228,220,0.3)] font-mono" data-reveal>
         * USD pricing for international clients. Prices exclude VAT. Timeline varies by scope.
-        <a href="#contact" className="text-blue/60 hover:text-blue ml-2 underline-hover">Get a custom quote →</a>
+        <a
+          href="#contact"
+          className="text-[rgba(232,228,220,0.5)] hover:text-[#e8e4dc] ml-2 underline-hover"
+        >
+          Get a custom quote →
+        </a>
       </p>
     </section>
   );

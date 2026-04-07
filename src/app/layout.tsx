@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, DM_Mono, Syne } from "next/font/google";
+import { DM_Sans, DM_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import ShaderBackground from "@/components/ShaderBackground";
+import SpringCursor from "@/components/SpringCursor";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -15,9 +18,9 @@ const dmMono = DM_Mono({
   display: "swap",
 });
 
-const syne = Syne({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -53,7 +56,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0D1B2A",
+  themeColor: "#0a0a0a",
   width: "device-width",
   initialScale: 1,
 };
@@ -64,8 +67,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${dmMono.variable} ${syne.variable}`}>
-      <body className="antialiased">{children}</body>
+    <html lang="en" className={`${dmSans.variable} ${dmMono.variable} ${playfairDisplay.variable}`}>
+      <body className="antialiased">
+        <ShaderBackground />
+        <SpringCursor />
+        <ScrollProgress />
+        {children}
+      </body>
     </html>
   );
 }

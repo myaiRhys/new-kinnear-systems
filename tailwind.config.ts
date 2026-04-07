@@ -9,21 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy:      "#0D1B2A",
-        "navy-800":"#162233",
-        "navy-700":"#1E2F42",
-        "navy-600":"#263C52",
-        blue:      "#2563EB",
-        "blue-dim":"#1B4F8A",
-        "blue-lt": "#EFF6FF",
-        "blue-pal":"#DBEAFE",
-        ink:       "#1A1A2E",
-        muted:     "#6B7280",
-        "off-wht": "#F8FAFC",
+        "shader-black": "#0a0a0a",
+        "shader-dark": "#111111",
+        "shader-text": "#e8e4dc",
+        "shader-muted": "rgba(232,228,220,0.4)",
+        "shader-border": "rgba(232,228,220,0.08)",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
       },
       animation: {
         "fade-up":   "fadeUp 0.6s ease forwards",
