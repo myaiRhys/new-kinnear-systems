@@ -58,6 +58,75 @@ const SERVICES = [
     desc: "Hosting, updates, support, and ongoing feature development. A dedicated technical partner, not a one-off vendor.",
     tags: ["Hosting", "Support", "Ongoing"],
   },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 0 1-8 0"/>
+      </svg>
+    ),
+    title: "E-commerce",
+    price: "From R12,000",
+    usd: "$700",
+    desc: "Custom online stores built on Shopify or Next.js. Fast, conversion-focused, and actually yours. No monthly platform tax eating your margin.",
+    tags: ["Shopify", "Next.js", "Stripe"],
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9 11l3 3L22 4"/>
+        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+      </svg>
+    ),
+    title: "Business Process Digitisation",
+    price: "From R25,000",
+    usd: "$1,500",
+    desc: "Replace your WhatsApp threads, spreadsheets and paper forms with real software. Bookings, job management, inventory — built around how your business actually works.",
+    tags: ["PWA", "Firebase", "Custom Logic"],
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 2v6h-6"/>
+        <path d="M3 12a9 9 0 0 1 15-6.7L21 8"/>
+        <path d="M3 22v-6h6"/>
+        <path d="M21 12a9 9 0 0 1-15 6.7L3 16"/>
+      </svg>
+    ),
+    title: "Website Redesign & Migration",
+    price: "From R8,000",
+    usd: "$450",
+    desc: "Stuck on Wix, WordPress or an outdated site? We'll move you to a fast, modern stack you actually own. No page builders, no recurring licence fees.",
+    tags: ["Next.js", "Migration", "Performance"],
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+      </svg>
+    ),
+    title: "Workflow Automation",
+    price: "From R10,000",
+    usd: "$600",
+    desc: "Connect your tools, eliminate manual steps, and let your systems talk to each other. Custom automations built to your exact process — not someone else's template.",
+    tags: ["API", "Automation", "Integration"],
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10"/>
+        <line x1="12" y1="20" x2="12" y2="4"/>
+        <line x1="6" y1="20" x2="6" y2="14"/>
+        <path d="M2 20h20"/>
+      </svg>
+    ),
+    title: "SEO & Performance Audits",
+    price: "From R3,500",
+    usd: "$200",
+    desc: "A clear, technical report on why your site isn't ranking or loading fast enough — with a prioritised fix list you can act on immediately.",
+    tags: ["SEO", "Core Web Vitals", "Reporting"],
+  },
 ];
 
 export default function Services() {
